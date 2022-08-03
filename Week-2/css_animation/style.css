@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+}
+
+.upper {
+}
+
+.lower {
+}
+
+.square-1,
+.square-2,
+.square-3,
+.square-4 {
+  display: block;
+}
+
+.square-1 {
+  background-color: red;
+  transition: transform 0.5s linear;
+  transform-origin: top left;
+}
+
+.square-2 {
+  background-color: yellow;
+  transition: transform 0.5s linear;
+  transform-origin: bottom left;
+}
+
+.square-3 {
+  background-color: blue;
+  transition: transform 0.5s linear;
+  transform-origin: top right;
+}
+
+.square-4 {
+  background-color: green;
+  transition: transform 0.5s linear;
+  transform-origin: bottom right;
+}
+
+.container:hover .square-1 {
+  transform: rotate(90deg);
+}
+
+.container:hover .square-2 {
+  transform: rotate(-90deg);
+}
+
+.container:hover .square-3 {
+  transform: rotate(-90deg);
+}
+
+.container:hover .square-4 {
+  transform: rotate(90deg);
+}
+
+.container h2 {
+    display: none;
+}
+
+.container:hover h2 {
+    display: inline;
+}
