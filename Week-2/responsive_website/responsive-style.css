@@ -1,0 +1,56 @@
+@media only screen and (max-width: 576px) {
+  body {
+    background-color: #9999ff;
+  }
+
+  #main-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .heading {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  aside {
+    padding: 1rem 2rem 0 1rem;
+  }
+
+  main {
+    padding-right: 2rem;
+  }
+
+  main article {
+    flex: 1 1 32%;
+    height: 30%;
+  }
+
+  #sign-up {
+    margin-top: 73rem;
+    padding-bottom: 3rem;
+  }
+
+  .form-container {
+    flex: 0.5 0.5 50%;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .label-container {
+    align-self: flex-start;
+    margin-bottom: 5px;
+  }
+
+
+}
