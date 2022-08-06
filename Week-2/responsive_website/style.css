@@ -4,7 +4,9 @@
   padding: 0;
 }
 
-section header
+section,
+.form-container
+/* header */
 /* aside, */
 /* main, */
 /* .heading, */
@@ -122,4 +124,63 @@ article > p {
 
 article p {
   text-align: justify;
+}
+
+#sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  flex: 0.1 0.1 30%;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+.label-container {
+  align-self: center;
+  text-align: left;
+  flex: 1 1 30%;
+}
+
+.input-container {
+  text-align: left;
+  flex: 1 1 60%;
+}
+
+.input-container input,
+.input-container select {
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+
+
+.form-row label {
+    margin: 0.5rem;
+}
+
+.btn input {
+    padding: 10px 2rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: large;
+    font-family: 'Lato';
+}
+
+.btn input:hover {
+    background-color: #9999FF;
+    border: #9999FF;
+    color: white;
 }
