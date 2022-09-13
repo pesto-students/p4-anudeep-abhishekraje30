@@ -42,7 +42,7 @@ const text = document.getElementById("text");
 const button = document.getElementById("button");
 
 const getNumber = () => {
-  new CustomPromise((res, rej) => {
+  return new CustomPromise((res, rej) => {
     const randomNumber = parseInt(Math.random() * 100, 20);
     setTimeout(() => {
       if (randomNumber % 5 === 0) {
@@ -52,8 +52,6 @@ const getNumber = () => {
     }, randomNumber * 10);
   });
 };
-
-
 
 const display = (content) => {
   text.innerText = content;
