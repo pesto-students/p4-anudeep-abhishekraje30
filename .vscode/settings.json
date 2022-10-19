@@ -6,4 +6,5 @@
         "strings": false
     },
     "editor.suggestOnTriggerCharacters": true,
+    "workbench.colorTheme": "Atom One Dark",
 }
