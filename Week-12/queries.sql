@@ -30,3 +30,17 @@ on st.warehouses_id = w.id
 group by wname) iq)
 
 -- Find an item which is ordered for a minimum number of times
+select it.id, it.description, count(item_id) min_count from items it
+inner join ordered_quantity oq
+on it.id = oq.item_id
+inner join orders od
+on oq.order_id = od.id
+group by it.id, it.description
+having count(item_id) = (select min(count) from (select it.id, it.description, count(item_id) from items it
+inner join ordered_quantity oq
+on it.id = oq.item_id
+inner join orders od
+on oq.order_id = od.id
+group by it.id, it.description) as iq)
+
+-- Find the detailed orders given by each customer.
