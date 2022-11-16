@@ -20,3 +20,13 @@ on junction_table.item_id = itm.id
 where cname = 'Customer 1'
 
 -- Find a Warehouse which has maximum stores
+select wname, count(store_name) from stores st
+inner join warehouses w
+on st.warehouses_id = w.id 
+group by wname
+having count(store_name) = (select max(count) from (select wname, count(store_name) from stores st
+inner join warehouses w
+on st.warehouses_id = w.id 
+group by wname) iq)
+
+-- Find an item which is ordered for a minimum number of times
